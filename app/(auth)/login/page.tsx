@@ -4,10 +4,16 @@ import { GithubIcon } from "lucide-react";
 import Image from "next/image";
 import GoogleIcon from '../../../public/google.svg';
 import Link from "next/link";
+import GithubSigninButton from "@/app/components/GithubSigninButton";
+import GoogleSignInButton from "@/app/components/GoogleSignInButton";
 
  
 
 export default function Login() {
+
+  const signIn =  () => {
+    
+  }
   return (
     <div className="mt-24 rounded bg-black/80 py-10 px-6 md:mt-0 md:max-w-sm md:px-14 ">
       <form>
@@ -28,20 +34,11 @@ export default function Login() {
         </div>
       </form>
       <div className="text-gray-500 text-sm mt-2">
-       New to Netflix? <Link href="/login" className="text-white hover:underline"> Sign now!</Link>
+       New to Netflix? <Link href="/sign-up" className="text-white hover:underline"> Signup now!</Link>
       </div>
       <div className="flex w-full justify-center items-center gap-x-3 mt-6">
-        <Button variant="outline" size="icon">
-          <GithubIcon />
-        </Button>
-        <Button variant="outline" size="icon">
-          <Image 
-            src={GoogleIcon}
-            alt="Google Icon"
-            priority
-            className="w-6 h-6"
-          />
-        </Button>
+      <GithubSigninButton />
+      <GoogleSignInButton />
       </div>
     </div>
   )

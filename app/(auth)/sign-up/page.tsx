@@ -4,6 +4,8 @@ import { GithubIcon } from "lucide-react";
 import Link from "next/link";
 import GoogleIcon from '../../../public/google.svg';
 import Image from "next/image";
+import GithubSigninButton from "@/app/components/GithubSigninButton";
+import GoogleSignInButton from "@/app/components/GoogleSignInButton";
 
 export default function SignUp() {
   return (
@@ -29,17 +31,8 @@ export default function SignUp() {
         Already Have a account? <Link href="/login" className="text-white hover:underline"> Login now!</Link>
       </div>
       <div className="flex w-full justify-center items-center gap-x-3 mt-6">
-        <Button variant="outline" size="icon">
-          <GithubIcon />
-        </Button>
-        <Button variant="outline" size="icon">
-          <Image 
-            src={GoogleIcon}
-            alt="Google Icon"
-            priority
-            className="w-6 h-6"
-          />
-        </Button>
+        <GithubSigninButton />
+        <GoogleSignInButton />
       </div>
     </div>
   );
